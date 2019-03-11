@@ -1,0 +1,48 @@
+
+
+
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+     <div fxFlex>
+        <div>
+          <h3>Menu</h3>
+          <hr>
+        </div>
+      </div>
+    
+      <div fxFlex *ngIf="dishes">
+        <mat-grid-list cols="2" rowHeight="200px">
+          <mat-grid-tile *ngFor="let page of pages" (click) = "onSelect(page)">
+            <img height="200px" src={{page.image}} alt={{page.name}}>
+            <mat-grid-tile-footer>
+              <h1 matLine>{{page.name | uppercase}}</h1>
+            </mat-grid-tile-footer>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+      <div [hidden]="dishes">
+          <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+      </div>
+
+
+      <div fxFlex *ngIf="selectedPage">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>
+                <h3>{{selectedPage.name | uppercase}}</h3>
+              </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src={{selectedPage.image}} alt={{selectedPage.name}}>
+            <mat-card-content>
+              <p>{{selectedPage.description}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+</div>
