@@ -1,0 +1,55 @@
+<header class="header js-header" data-comp="Header">
+  <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+    <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
+  </button>
+
+  <a href="/" class="brand-lockup js-analytics-click">
+    <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+    <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+  </a>
+
+  <nav class="header__nav" role="navigation">
+    <ul class="header__nav-list header__nav-list--selected">
+          <li class="header__nav-item  js-header-item">
+            <a href="/"
+                class="header__nav-link js-analytics-click">
+              Home
+              <span class="header__nav-indicator"></span>
+            </a>
+          </li>
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
+            <a href="/design" class="header__nav-link js-analytics-click">
+              Design
+              <span class="header__nav-indicator"></span>
+            </a>
+          </li>
+          <li class="header__nav-item  js-header-item">
+            <a href="/develop" class="header__nav-link js-analytics-click">
+              Develop
+              <span class="header__nav-indicator"></span>
+            </a>
+          </li>
+          <li class="header__nav-item  js-header-item">
+            <a href="/tools" class="header__nav-link js-analytics-click">
+              Tools
+              <span class="header__nav-indicator"></span>
+            </a>
+          </li>
+    </ul>
+  </nav>
+
+  <form id="search-form" class="search-form js-search" data-comp="SearchForm" data-props-searchform='{"basePath": "/", "ajax": false, "showOnLoad": false}'>
+    <button class="search-form__back js-search-back js-analytics-click" type="button">
+      <i class="material-icons">arrow_back</i>
+    </button>
+
+    <input id="search-query" class="search-form__input js-search-input" name="q" type="text" title="query" placeholder="Search" autocomplete="off" aria-label="Press Enter to search.">
+  </form>
+
+  <button class="header__search header__button js-toggle-search js-analytics-click">
+    <div class="icons-container mdc-ripple-surface" data-mdc-ripple-is-unbounded>
+      <i class="material-icons header__spyglass" aria-label="Search">search</i>
+      <i class="material-icons header__search-close" aria-label="Close">close</i>
+    </div>
+  </button>
+</header>

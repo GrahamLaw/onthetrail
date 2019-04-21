@@ -1,0 +1,74 @@
+<!--Main Navigation-->
+<!-- <header> -->
+  <!--Navbar-->
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top scrolling-navbar">
+        
+        <!-- Navbar brand -->
+        <a class="navbar-brand ml-1" href="#">
+          <img src="assets/images/OTT/logo_min_icon.ico?v=2" alt="">
+          <span class="navbar-brand ml-3">on the Trail...</span>
+        </a>
+        <!-- Collapse button -->
+        <button class="navbar-toggler navbar-toggler-right btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarResponsive"  aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+
+      <div class="collapse navbar-collapse" id="appNavigation" [ngbCollapse]="isCollapsed">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" routerLink="" routerLinkActive="active">Home</a>
+            <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">About</a>
+            <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">On the Beer Trail</a>
+            <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">On the Ultra Trail</a>
+            <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">On the Orienteering Trail</a>
+            
+            <!--  <div class="nav-item dropdown" ngbDropdown>
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" ngbDropdownToggle>
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
+                    <button class="dropdown-item">Action - 1</button>
+                    <button class="dropdown-item">Another Action</button>
+                    <button class="dropdown-item">Something else is here</button>
+                </div>
+            </div> -->
+
+        
+        </div>
+      </div>
+    </nav>
+  <!--/.Navbar-->
+   <!--Mask-->
+   <div id="intro" class="view">
+
+      <div class="mask rgba-black-strong">
+
+              <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+        
+                  <div class="row d-flex justify-content-center text-center">
+        
+                      <div class="col-md-10">
+        
+                          <!-- Heading -->
+                          <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">On the Trail...</h2>
+        
+                          <!-- Divider -->
+                          <hr class="hr-light">
+        
+        
+                          <!-- Description -->
+                          <h4 class="white-text my-4">Website under construction. Coming soon!!</h4>
+                          <button type="button" class="btn btn-outline-white">Read more<i class="fas fa-book ml-2"></i></button>
+        
+                      </div>
+        
+                  </div>
+        
+              </div>
+        
+          </div>
+</div> 
+<!-- <app-home></app-home> -->
+<!--/.Mask-->
+<!-- </header> -->
+

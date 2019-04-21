@@ -24,4 +24,8 @@ export class PageService {
     return of(PAGES.filter((Page) => Page.featured)[0]).pipe(delay(2000));
   }
 
+  getPageIds(): Observable<number[] | any> {
+    return of(PAGES.map(Page => Page.id ));
+  }
+
 }

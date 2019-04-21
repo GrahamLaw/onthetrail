@@ -16,6 +16,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms'; 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HttpClientModule } from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+
+import {
+  MatIconModule,  MatSidenavModule
+} from '@angular/material';
+
 
 import 'hammerjs';
 
@@ -31,6 +41,14 @@ import { AboutComponent } from './about/about.component';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 import { LoginComponent } from './login/login.component';
+import { baseURL } from './shared/baseurl';
+import { HeaderBootstrapComponent } from './header-bootstrap/header-bootstrap.component';
+import { HeaderMatComponent } from './header-mat/header-mat.component';
+import { HeaderBlackComponent } from './header-black/header-black.component';
+import { HeaderBootMainComponent } from './header-boot-main/header-boot-main.component';
+import { Testpage1Component } from './testpage1/testpage1.component';
+import {MenubarModule} from 'primeng/menubar';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +59,12 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderBootstrapComponent,
+    HeaderMatComponent,
+    HeaderBlackComponent,
+    HeaderBootMainComponent,
+    Testpage1Component
   ],
   imports: [
     BrowserModule,
@@ -58,12 +81,20 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatCheckboxModule,
     FormsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    HttpClientModule,
+    NgbModule,
+    MatIconModule,  
+    MatSidenavModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    MenubarModule
   ],
   providers: [
     PageService, 
     PromotionService,
     LeaderService,
+    {provide: 'BaseURL', useValue: baseURL}
   ],
   entryComponents: [
     LoginComponent
